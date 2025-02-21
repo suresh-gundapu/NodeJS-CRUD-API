@@ -3,7 +3,7 @@ const express = require("express");
 const connectDB = require("./DBConnect");
 const Users = require("./Models/Users");
 
-const PORT = 7000;
+const PORT = process.env.PORT || 7000; // Use Render's assigned port
 const app = express();
 
 app.use(express.json()); //middleware
